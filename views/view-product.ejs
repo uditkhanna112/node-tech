@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+    <title>
+    New Product
+    </title>
+    <body>
+        <h2><%= data.Name %></h2>
+       <h5><b>Name: </b><%= data.Name %></h5>
+       <h5><b>Description: </b><%= data.Description %></h5>
+       <h5><b>RAM: </b><%= data.RAM %></h5>
+       <h5><b>Processor: </b><%= data.Processor %></h5>
+       <h5><b>Type: </b><%= data.Type %></h5>
+    <a href="/update-product/update/<%= data._id %>" class="btn btn-primary">Update</a>
+    <a href="/delete-product/<%= data._id %>" class="btn btn-danger">Delete</a>
+    <a href="/read-products" class="btn btn-success">Back</a>
+    </body>
+</html>

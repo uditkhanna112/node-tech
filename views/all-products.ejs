@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<title>
+Products
+</title>
+
+    <body>
+        <h1>List of Products</h1>
+        <ul>
+<% data.forEach(function(arr1){ %>
+        <li>
+            <a href='/read-products/<%= arr1._id %>'><%= arr1.Name %></a>
+        </li>
+        <% });%>
+    </ul>
+    <a href="/" class="btn btn-success">Add Product</a>
+    
+    </body>
+</html>

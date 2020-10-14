@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<title>
+New Product
+</title>
+
+<body>
+    <form action="/update-product/<%=data._id%>" method="post">
+    <div class="form-group">
+        <label for="Name">Product Name</label>
+        <br>
+        <input type="text" name="Name" id="Name" value="<%=data.Name%>" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="Description">Product Description</label>
+        <br>
+        <input id="Description" type="text" name="Description" value="<%=data.Description%>" required>
+    </div>
+
+    <div class="form-group">
+        <label for="RAM">Product RAM</label>
+        <br>
+        <input type="number" name="RAM" id="RAM" min="1" max="256" value="<%=data.RAM%>" required>
+    </div>
+
+    <div class="form-group">
+        <label for="Processor">Processor</label>
+        <br>
+        <input type="text" name="Processor" id="Processor" value="<%=data.Processor%>" required>
+    </div>
+<% if(data.Type==="Mobile"){%>
+    <div class="form-group">
+        <label for="Type">Product Type</label>
+        <br>
+        <label for="Type1">Mobile</label>
+        <input type="radio" name="Type" id="Type1" value="Mobile" checked>
+        
+        <label for="Type2">Laptop</label>
+        <input type="radio" name="Type" id="Type2" value="Laptop">
+    </div>
+<%}else{%>
+    <div class="form-group">
+        <label for="Type">Product Type</label>
+        <br>
+        <label for="Type1">Mobile</label>
+        <input type="radio" name="Type" id="Type1" value="Mobile">
+        
+        <label for="Type2">Laptop</label>
+        <input type="radio" name="Type" id="Type2" value="Laptop" checked>
+    </div>
+    <%}%>
+    <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+</body>
+</html>

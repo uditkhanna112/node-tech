@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<title>
+New Product
+</title>
+
+<body>
+    <h2>Add New Product</h2>
+    <form action="/create-product" method="post">
+    <div class="form-group">
+        <label for="Name">Product Name</label>
+        <br>
+        <input type="text" name="Name" id="Name" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="Description">Product Description</label>
+        <br>
+        <input id="Description" type="text" name="Description" required>
+    </div>
+
+    <div class="form-group">
+        <label for="RAM">Product RAM</label>
+        <br>
+        <input type="number" name="RAM" id="RAM" min="1" max="256" required>
+    </div>
+
+    <div class="form-group">
+        <label for="Processor">Processor</label>
+        <br>
+        <input type="text" name="Processor" id="Processor" required>
+    </div>
+
+    <div class="form-group">
+        <label for="Type">Product Type</label>
+        <br>
+        <label for="Type1">Mobile</label>
+        <input type="radio" name="Type" id="Type1" value="Mobile" checked>
+        
+        <label for="Type2">Laptop</label>
+        <input type="radio" name="Type" id="Type2" value="Laptop">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add Product</button>
+    <a href="/read-products" class="btn btn-success">View Products</a>
+    </form>
+</body>
+</html>
