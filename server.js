@@ -22,4 +22,4 @@ app.use('/update-product/',require('./routes/api/update-product'));
 
 
 //port 3000 fro localhost
-app.listen(3000 || PORT)
+app.listen(PORT);
